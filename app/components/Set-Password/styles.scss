@@ -1,0 +1,107 @@
+@import './../../sass/vars.scss';
+
+.screen {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(127deg, rgba(36, 219, 229, 0.66), rgba(109, 190, 199, 0.65) 29%, rgba(234, 193, 202, 0.64) 65%, rgba(237, 208, 208, 0.66));
+}
+.box {
+  @util center;
+  width: 30%;
+}
+.form {
+  background-color: $white;
+  border: 2px solid $lightBlueGrey;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 6px 0 rgba(242, 242, 242, 0.5);
+  padding: 20px;
+  h1 {
+    text-align: center;
+    color: $red;
+    font-size: $massiveSize;
+    margin-bottom: 30px;
+  }
+  label span {
+    display: block;
+    text-align: left;
+    color: $lightBlueGrey;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  [type='text'],
+  [type='email'],
+  [type='password'] {
+    box-shadow: none!important;
+    padding: 7px;
+    width: calc(100% - 18px);
+  }
+  form > fieldset {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+}
+.links {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  > a:hover {
+    border: none;
+  }
+}
+.btn {
+  border: none;
+  padding: 5px 30px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.logo {
+    width: 102px;
+    margin: 0 calc(50% - 51px) 20px calc(50% - 51px);
+}
+
+.center {
+    text-align: center !important;
+}
+.bottom-spacing {
+    margin-bottom: 34px;
+}
+
+.wrong-pass {
+  color: red;
+  margin-bottom: 5px;
+}
+
+.right {
+    float: right;
+}
+
+.right-link {
+    @extend .links;
+    @extend .right;
+    font-size: $tinySize;
+    text-decoration: underline;
+    > *{
+      color: $black !important;
+    }
+    margin: 0 !important;
+    padding: 0 !important;
+}
+@media (min-width: $mobileBreakpoint) {
+  .box {
+    width: 80%;
+  }
+}
+@media (min-width: $tabletBreakpoint) {
+  .box {
+    width: 40%;
+  }
+}
+@media (min-width: $largeMonitorBreakpoint) {
+  .box {
+    width: 30%;
+  }
+}

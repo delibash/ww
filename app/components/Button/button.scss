@@ -1,0 +1,33 @@
+@import './../../sass/vars.scss';
+
+.contact-button {
+  /* width: 110px; */
+  & > div {
+    background-color: $white;
+    border: 1px solid $lightBlueGrey;
+    /* border-bottom: 0; */
+    color: $midPaleGrey;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: $miniSize;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 5px 15px 0 15px;
+  }
+  & > button {
+    width: 100%;
+    font-size: $miniSize;
+    letter-spacing: 2px;
+    padding: 5px 15px;
+  }
+}
+
+.engaged {
+  background: $windowsBlue;
+}
+.invited {
+  background: $windowsBlue;
+}
+.new {
+  background: $windowsBlue;
+}

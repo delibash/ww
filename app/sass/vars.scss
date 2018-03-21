@@ -1,0 +1,326 @@
+@import './mixins.scss';
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+$red              : #DB2828;
+$orange           : #F2711C;
+$yellow           : #FBBD08;
+$olive            : #B5CC18;
+$green            : #21BA45;
+$teal             : #00B5AD;
+$blue             : #2185D0;
+$violet           : #6435C9;
+$purple           : #A333C8;
+$pink             : #E03997;
+$brown            : #A5673F;
+$grey             : #767676;
+$black            : #1B1C1D;
+
+// Zeplin Colors
+$windowsBlue				  : #2F96A7;
+$lightBlueGrey        : #D9E2Eb;
+$cloudyBlue           : #C5D3E0;
+$warmGrey             : #717171;
+$warmGreyTwo          : #9D9D9D;
+$paleGray             : #F7F8FA;
+$paleGrey             : #F6F6F6;
+$offWhite             : #E2E2E2;
+$midPaleGrey          : #A3A3A3;
+$veryPaleGray         : #999999;
+
+/*---  Light Colors  ---*/
+$lightRed         : #FF695E;
+$lightOrange      : #FF851B;
+$lightYellow      : #FFE21F;
+$lightOlive       : #D9E778;
+$lightGreen       : #2ECC40;
+$lightTeal        : #6DFFFF;
+$lightBlue        : #54C8FF;
+$lightViolet      : #A291FB;
+$lightPurple      : #DC73FF;
+$lightPink        : #FF8EDF;
+$lightBrown       : #D67C1C;
+$lightGrey        : #DCDDDE;
+$lightBlack       : #545454;
+
+/*---   Neutrals  ---*/
+$fullBlack        : #000000;
+$offWhite         : #F9FAFB;
+$darkWhite        : #F3F4F5;
+$midWhite         : #DCDDDE;
+$white            : #FFFFFF;
+
+/*--- Colored Backgrounds ---*/
+$redBackground    : #FFE8E6;
+$orangeBackground : #FFEDDE;
+$yellowBackground : #FFF8DB;
+$oliveBackground  : #FBFDEF;
+$greenBackground  : #E5F9E7;
+$tealBackground   : #E1F7F7;
+$blueBackground   : #DFF0FF;
+$violetBackground : #EAE7FF;
+$purpleBackground : #F6E7FF;
+$pinkBackground   : #FFE3FB;
+$brownBackground  : #F1E2D3;
+
+/*--- Colored Text ---*/
+$redTextColor    : $red;
+$orangeTextColor : $orange;
+$yellowTextColor : #B58105; // Yellow text is difficult to read
+$oliveTextColor  : #8ABC1E; // Olive is difficult to read
+$greenTextColor  : #1EBC30; // Green is difficult to read
+$tealTextColor   : #10A3A3; // Teal text is difficult to read
+$blueTextColor   : $blue;
+$violetTextColor : $violet;
+$purpleTextColor : $purple;
+$pinkTextColor   : $pink;
+$brownTextColor  : $brown;
+
+/*--- Colored Headers ---*/
+$redHeaderColor    : darken($redTextColor, 5);
+$oliveHeaderColor  : darken($oliveTextColor, 5);
+$greenHeaderColor  : darken($greenTextColor, 5);
+$yellowHeaderColor : darken($yellowTextColor, 5);
+$blueHeaderColor   : darken($blueTextColor, 5);
+$tealHeaderColor   : darken($tealTextColor, 5);
+$pinkHeaderColor   : darken($pinkTextColor, 5);
+$violetHeaderColor : darken($violetTextColor, 5);
+$purpleHeaderColor : darken($purpleTextColor, 5);
+$orangeHeaderColor : darken($orangeTextColor, 5);
+$brownHeaderColor  : darken($brownTextColor, 5);
+
+
+/*-------------------
+     Alpha Colors
+--------------------*/
+
+$subtleTransparentBlack     : rgba(0, 0, 0, 0.05);
+$transparentBlack           : rgba(0, 0, 0, 0.15);
+$strongTransparentBlack     : rgba(0, 0, 0, 0.35);
+$veryStrongTransparentBlack : rgba(0, 0, 0, 0.50);
+
+$subtleTransparentWhite     : rgba(255, 255, 255, 0.02);
+$transparentWhite           : rgba(255, 255, 255, 0.08);
+$strongTransparentWhite     : rgba(255, 255, 255, 0.15);
+
+/*-------------------
+       Accents
+--------------------*/
+
+/* Differentiating Neutrals */
+$subtleGradient: linear-gradient(transparent, $transparentBlack);
+
+/* Differentiating Layers */
+$subtleShadow:
+  0px 1px 2px 0 rgba(34, 36, 38, 0.15)
+;
+$floatingShadow:
+  0px 2px 4px 0px rgba(34, 36, 38, 0.12),
+  0px 2px 10px 0px rgba(34, 36, 38, 0.15)
+;
+
+/*-------------------
+    Emotive Colors
+--------------------*/
+
+/* Positive */
+$positiveColor           : $green;
+$positiveBackgroundColor : #FCFFF5;
+$positiveBorderColor     : #A3C293;
+$positiveHeaderColor     : #1A531B;
+$positiveTextColor       : #2C662D;
+
+/* Negative */
+$negativeColor           : $red;
+$negativeBackgroundColor : #FFF6F6;
+$negativeBorderColor     : #E0B4B4;
+$negativeHeaderColor     : #912D2B;
+$negativeTextColor       : #9F3A38;
+
+/* Info */
+$infoColor              : #31CCEC;
+$infoBackgroundColor    : #F8FFFF;
+$infoBorderColor        : #A9D5DE;
+$infoHeaderColor        : #0E566C;
+$infoTextColor          : #276F86;
+
+/* Warning */
+$warningColor           : #F2C037;
+$warningBorderColor     : #C9BA9B;
+$warningBackgroundColor : #FFFAF3;
+$warningHeaderColor     : #794B02;
+$warningTextColor       : #573A08;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+$primaryColor        : $blue;
+$secondaryColor      : $black;
+
+$lightPrimaryColor   : $lightBlue;
+$lightSecondaryColor : $lightBlack;
+
+/*-------------------
+     Neutral Text
+--------------------*/
+
+$darkTextColor               : rgba(0, 0, 0, 0.85);
+$mutedTextColor              : rgba(0, 0, 0, 0.6);
+$lightTextColor              : rgba(0, 0, 0, 0.4);
+
+$unselectedTextColor         : rgba(0, 0, 0, 0.4);
+$hoveredTextColor            : rgba(0, 0, 0, 0.8);
+$pressedTextColor            : rgba(0, 0, 0, 0.9);
+$selectedTextColor           : rgba(0, 0, 0, 0.95);
+$disabledTextColor           : rgba(0, 0, 0, 0.2);
+
+$invertedTextColor           : rgba(255, 255, 255, 0.9);
+$invertedMutedTextColor      : rgba(255, 255, 255, 0.8);
+$invertedLightTextColor      : rgba(255, 255, 255, 0.7);
+$invertedUnselectedTextColor : rgba(255, 255, 255, 0.5);
+$invertedHoveredTextColor    : rgba(255, 255, 255, 1);
+$invertedPressedTextColor    : rgba(255, 255, 255, 1);
+$invertedSelectedTextColor   : rgba(255, 255, 255, 1);
+$invertedDisabledTextColor   : rgba(255, 255, 255, 0.2);
+
+/*-------------------
+     Brand Colors
+--------------------*/
+
+$facebookColor   : #3B5998;
+$twitterColor    : #55ACEE;
+$googlePlusColor : #DD4B39;
+$linkedInColor   : #1F88BE;
+$youtubeColor    : #CC181E;
+$pinterestColor  : #BD081C;
+$vkColor         : #4D7198;
+$instagramColor  : #49769C;
+
+
+$image-folder: '../../public/images';
+$fonts-folder: '../../public/fonts';
+
+/*-------------------
+       Fonts
+--------------------*/
+
+$fontName          : 'Open Sans';
+$fontSmoothing     : antialiased;
+
+$headerFont        : $fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$pageFont          : $fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+$googleFontName    : 'Open+Sans';
+$importGoogleFonts : true;
+$googleFontSizes   : '400,400i,700,700i';
+$googleSubset      : 'latin';
+
+$googleProtocol    : 'https://';
+$googleFontRequest : $googleFontName+':'+$googleFontSizes+'&subset='+$googleSubset;
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+/* This is the single variable that controls them all */
+$emSize   : 14px;
+$minEmSize: 14px;
+$maxEmSize: 18px;
+
+/* The size of page text  */
+$fontSize : 14px;
+
+/*-------------------
+        Sizes
+--------------------*/
+
+/*
+  Sizes are all expressed in terms of 14px/em (default em)
+  This ensures these "ratios" remain constant despite changes in EM
+*/
+
+$miniSize        : unit(11 / 14, rem);
+$tinySize        : unit(12 / 14, rem);
+$smallSize       : unit(13 / 14, rem);
+$mediumSize      : unit(14 / 14, rem);
+$largeSize       : unit(16 / 14, rem);
+$bigSize         : unit(18 / 14, rem);
+$hugeSize        : unit(20 / 14, rem);
+$massiveSize     : unit(30 / 14, rem);
+
+/*-------------------
+        Page
+--------------------*/
+
+$pageMinWidth       : 320px;
+$pageBackground      : #f5f5f5;
+$pageOverflowX       : hidden;
+$lineHeight          : 1.4285em;
+$textColor           : rgba(0, 0, 0, 0.87);
+
+/*--------------
+  Page Heading
+---------------*/
+
+$headerFontWeight : bold;
+$headerLineHeight : unit((18/14), em);
+$h1 : unit((28 / 14), rem);
+$h2 : unit((24 / 14), rem);
+$h3 : unit((18 / 14), rem);
+$h4 : unit((15 / 14), rem);
+$h5 : unit((14 / 14), rem);
+
+$lineHeightOffset: (($lineHeight - 1em) / 2);
+$headerLineHeightOffset : ($headerLineHeight - 1em) / 2;
+$headerBottomMargin: 1rem;
+$headerTopMargin: 1rem;
+$headerMargin: $headerTopMargin 0rem $headerBottomMargin;
+
+
+/*-------------------
+      Paragraph
+--------------------*/
+
+$paragraphMargin     : 0em 0em 1em;
+$paragraphLineHeight : $lineHeight;
+
+/*-------------------
+       Links
+--------------------*/
+
+$linkColor           : $windowsBlue;
+$linkUnderline       : none;
+$linkHoverColor      : darken(saturate($linkColor, 20), 15);
+$linkHoverUnderline  : $linkUnderline;
+
+/*--- Borders & Shadows ---*/
+
+$greyBoxShadowLarge   : 0 10px 6px -6px $warmGrey;
+$greyBorderBottom3px  : inset 0 -3px 0 0 $textColor;
+
+/*-------------------
+        Grid
+--------------------*/
+
+$columnCount: 16;
+
+/*-------------------
+     Transitions
+--------------------*/
+
+$defaultDuration : 0.1s;
+$defaultEasing   : ease;
+
+/*-------------------
+     Breakpoints
+--------------------*/
+
+$mobileBreakpoint            : 320px;
+$tabletBreakpoint            : 768px;
+$computerBreakpoint          : 992px;
+$largeMonitorBreakpoint      : 1200px;
+$widescreenMonitorBreakpoint : 1920px;

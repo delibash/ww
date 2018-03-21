@@ -1,0 +1,53 @@
+@import './../../sass/vars.scss';
+.container {
+  position: relative;
+}
+.label {
+  padding: 10px 15px;
+  background: $paleGray;
+  text-align: center;
+  border: 1px solid $lightBlueGrey;
+  cursor: pointer;
+  &::after {
+    font-awesome: caret-down;
+    padding-left: 15px;
+  }
+  &::before {
+    font-awesome: filter;
+    padding-right: 10px;
+  }
+}
+
+.list {
+  display: none;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 5px 5px 5px 0px $paleGrey;
+  border: 1px solid $lightBlueGrey;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 43px;
+  width: calc(100%);
+  background: $white;
+  span {
+    padding-bottom: 15px;
+    display: inline-block;
+  }
+}
+
+.active {
+  display: block;
+}
+
+.filters {
+  li {
+    margin-bottom: 10px;
+  }
+  label {
+    cursor: pointer;
+  }
+  input {
+    margin-right: 10px;
+  }
+}

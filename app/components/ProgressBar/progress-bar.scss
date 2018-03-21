@@ -1,0 +1,74 @@
+@import './../../sass/vars.scss';
+
+@mixin quarters($value) {
+  @for $i from 1 through 100 {
+    @if $i % 25 == 0 {
+      .#{$value}[value='#{$i}'] ~ i:nth-of-type(1) {
+        background: $windowsBlue;
+      }
+    }
+  }
+}
+
+.progress-container {
+  height: 5px;
+  width: 100%;
+  min-width: 130px;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  margin-left: -4px;
+  > i {
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background: $lightGrey;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    &.first {
+      left: 0;
+    }
+    &.second {
+      left: 50%;
+    }
+    &.third {
+      left: 100%;
+    }
+  }
+}
+.progress-bar {
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 9px;
+  &::-webkit-progress-value{ /* Changes line color */
+    background: $windowsBlue;
+    transition: all 0.4s ease-in-out;
+  }
+  &::-webkit-progress-bar{ /* Changes background color */
+    background: $lightGrey;
+  }
+  // Set progress bar colors
+  &[value='1'] ~ i:nth-of-type(1) {
+    background: $windowsBlue;
+  }
+  &[value='50'] ~ i:nth-of-type(1) {
+    background: $windowsBlue;
+    & ~ i:nth-of-type(2) {
+      background: $windowsBlue;
+    }
+  }
+  &[value='100'] ~ i:nth-of-type(1) {
+    background: $windowsBlue;
+    & ~ i:nth-of-type(2) {
+      background: $windowsBlue;
+    }
+    & ~ i:nth-of-type(3) {
+      background: $windowsBlue;
+    }
+  }
+}
+
+// @include quarters(progress-bar);

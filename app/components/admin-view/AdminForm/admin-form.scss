@@ -1,0 +1,79 @@
+@import './../../../sass/vars.scss';
+
+.container {
+  padding: 20px;
+  border: 2px solid $cloudyBlue;
+  background-color: $white;
+  textarea {
+    padding: 10px;
+    width: 100%;
+    width: calc(100% - 22px);
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+    & + [type='text'] {
+      display: block;
+      border: 0!important;
+      box-shadow: inset 0 0 0 1px $warmGrey!important;
+      border-radius: 0!important;
+      width: 100%;
+      width: calc(100% - 20px);
+      padding: 10px;
+      color: $textColor!important;
+    }
+  }
+  label, h3 {
+    text-transform: uppercase;
+  }
+  .select {
+    position: relative;
+    &::after {
+      font-family: FontAwesome;
+      content: "\f0d7";
+      color: $warmGrey;
+      padding-left: 5px;
+      position: absolute;
+      right: 15px;
+      top: 38px;
+    }
+    select {
+      width: 100%;
+      cursor: pointer;
+      background: transparent;
+      appearance: none;
+      font-weight: bold;
+      border: 0;
+      border-radius: 0;
+      box-shadow: inset 0 0 0 1px $warmGrey;
+      padding: 10px;
+    }
+  }
+  .grid {
+    display: flex;
+    align-items: center;
+    &Item {
+      lost-column: 1/2;
+    }
+  }
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex-direction: row-reverse;
+    label {
+      text-transform: none;
+      margin: 0 0 0 10px;
+    }
+  }
+  .divider {
+    margin-bottom: 20px;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}

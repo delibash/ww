@@ -1,0 +1,25 @@
+@import './../../sass/vars.scss';
+
+.screen {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(127deg, rgba(36, 219, 229, 0.66), rgba(109, 190, 199, 0.65) 29%, rgba(234, 193, 202, 0.64) 65%, rgba(237, 208, 208, 0.66));
+}
+.box {
+  @util center;
+  width: 40%;
+}
+.form {
+  background-color: $white;
+  border: 2px solid $lightBlueGrey;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 6px 0 rgba(242, 242, 242, 0.5);
+  padding: 20px;
+  > span {
+      width: 100%;
+      display: block;
+  }
+  a {
+      margin-left: 5px;
+  }
+}

@@ -1,0 +1,50 @@
+@import './../../sass/vars.scss';
+// Toggle Button
+@import './../../sass/toggle.scss';
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: $smallSize;
+}
+.ats,
+.non-ats {
+  color: $black;
+}
+
+.block-board {
+  display: flex;
+  border: 1px solid $lightBlueGrey;
+  justify-content: space-between;
+  align-items: center;
+  .item {
+    flex: 1;
+    background-color: $white;
+    padding: 20px 40px;
+    color: $windowsBlue;
+    text-align: center;
+    &:not(:first-child) {
+      border-left: 1px solid $lightBlueGrey;
+    }
+  }
+  .large-label {
+    font-size: $massiveSize;
+  }
+  .small-label {
+    margin-top: 15px;
+    color: $windowsBlue;
+    font-size: $smallSize;
+  }
+}
+.toggle {
+  .user-name {
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: super;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+}

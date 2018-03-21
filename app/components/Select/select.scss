@@ -1,0 +1,22 @@
+@import './../../sass/vars.scss';
+
+.select {
+  &::after {
+    color: $warmGrey;
+    font-awesome: caret-down;
+    padding-left: 5px;
+  }
+  select {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    width: auto;
+    appearance: none;
+    color: $warmGrey;
+    font-weight: bold;
+  }
+
+  .caret {
+      padding-left: 5px;
+  }
+}

@@ -1,0 +1,50 @@
+@import './../../../sass/vars.scss';
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  @media (min-width: $tabletBreakpoint) {
+    margin: 20px 0;
+  }
+}
+.item {
+  font-size: $h3;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: inherit;
+  &:hover,
+  &.active {
+    box-shadow: $greyBorderBottom3px;
+    -webkit-text-stroke: 1px;
+    -moz-text-stroke: 1px;
+    border-bottom: 0;
+    color: inherit;
+  }
+}
+
+.activeItem {
+    @extend .item;
+    box-shadow: $greyBorderBottom3px;
+    -webkit-text-stroke: 1px;
+    -moz-text-stroke: 1px;
+    border-bottom: 0;
+    color: inherit;
+}
+
+.count {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background: $lightBlueGrey;
+  display: inline-block;
+  margin-left: 10px;
+  sup {
+    @util center;
+  }
+}

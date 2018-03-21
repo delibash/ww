@@ -1,0 +1,21 @@
+:global {
+  button, .btn {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid $lightBlueGrey;
+    border-radius: 0;
+    color: $white;
+    background-color: $windowsBlue;
+    font-size: $mediumSize;
+    text-transform: uppercase;
+  }
+  .close-x {
+    cursor: pointer;
+    background: $white;
+    padding: 2px 7px;
+    color: $textColor;
+    &::after {
+      content: 'x';
+    }
+  }
+}

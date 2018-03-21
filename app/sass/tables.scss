@@ -1,0 +1,29 @@
+@import './vars.scss';
+
+:global {
+  table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+
+  thead {
+    background-color: $lightBlueGrey;
+  }
+
+  th, td {
+    padding: 20px;
+  }
+
+  th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  tbody tr {
+    background-color: $white;
+    &:nth-of-type(2n) {
+      background-color: $offWhite;
+    }
+  }
+}

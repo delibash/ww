@@ -1,0 +1,17 @@
+// Example for Lost Grid http://lostgrid.org/
+
+@lost gutter 60px;
+@lost flexbox flex;
+@lost cycle none;
+@lost clearing left;
+@lost rounder 100;
+@lost --beta-direction rtl;
+
+.grid {
+  background: white;
+  lost-center: 980px;
+  &__item {
+    background: black;
+    lost-column: 1/3;
+  }
+}

@@ -1,0 +1,31 @@
+@function unit($value, $unit) {
+	@return $value + $unit;
+}
+
+@mixin center($position) {
+	display: flex;
+	@if $position == 'both' {
+    align-items: center;
+    justify-content: center;
+  }
+	@else if $position == 'vertical' {
+		align-items: center;
+	}
+
+	@else if $position == 'horizontal' {
+		justify-content: center;
+	}
+
+	@else if $position == 'evenly' {
+		justify-content: space-evenly;
+	}
+
+	@else if $position == 'between' {
+		justify-content: space-between;
+	}
+
+	@else if $position == 'none' {
+		align-items: stretch;
+		justify-content: flex-start;
+	}
+}

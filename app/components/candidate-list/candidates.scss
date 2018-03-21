@@ -1,0 +1,96 @@
+@import './../../sass/vars.scss';
+.roles {
+  color: $warmGrey;
+  span, strong {
+    display: inline-block;
+  }
+}
+
+.roles-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  span {
+    text-transform: uppercase;
+    font-size: $smallSize;
+  }
+}
+.role-card {
+  border: 1px solid $lightBlueGrey;
+  background-color: $white;
+  padding: 10px;
+  margin-bottom: 10px;
+  > * {
+    width: calc(100% - 20px);
+  }
+  span:first-child {
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.roles-list {
+  border: 1px solid $lightBlueGrey;
+  overflow-y: scroll;
+  height: 100vh;
+  background-color: $white;
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid $lightBlueGrey;
+    &:hover {
+      background-color: $paleGray;
+    }
+    cursor: pointer;
+    > div {
+      flex: 1;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+  *.active {
+    background-color: $paleGray;
+    .jobTitle {
+      font-weight: bold;
+    }
+    .infoToggle {
+      display: block;
+      text-align: center;
+      padding: 20px 0;
+      a {
+        margin-right: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        &.active {
+          color: $linkHoverColor;
+          border-bottom: 2px solid;
+        }
+      }
+    }
+  }
+}
+.num {
+  font-size: $smallSize;
+  color: $cloudyBlue;
+  font-weight: bold;
+  &::after {
+    font-awesome: chevron-right;
+    padding-left: 5px;
+    font-size: $miniSize;
+  }
+}
+.jobId {
+  font-size: $miniSize;
+  color: $warmGrey;
+}
+.jobTitle {
+  font-size: $largeSize;
+  color: $warmGrey;
+}
+.infoToggle {
+  display: none;
+}

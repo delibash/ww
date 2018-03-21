@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ai.wadeandwendy</groupId>
+        <artifactId>recruiter-app</artifactId>
+        <version>1.6.4</version>
+    </parent>
+
+    <artifactId>recruiter-app-frontend</artifactId>
+    <version>1.4.0</version>
+
+    <properties>
+        <NODE_ENV>development</NODE_ENV>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <nodeVersion>v6.9.5</nodeVersion>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <!-- Optional configuration which provides for running any npm command -->
+                        <configuration>
+                            <arguments>install</arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>npm run build</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>run clean</arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>webpack build</id>
+                        <goals>
+                            <goal>webpack</goal>
+                        </goals>
+
+                        <configuration>
+                            <arguments>--progress</arguments>
+                            <environmentVariables>
+                                <NODE_ENV>${NODE_ENV}</NODE_ENV>
+                            </environmentVariables>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>
+                    dist
+                </directory>
+            </resource>
+        </resources>
+        <outputDirectory>
+            src/main/resources/public
+        </outputDirectory>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>frontend-staging</id>
+            <activation>
+                <property>
+                    <name>env.ENV</name>
+                    <value>staging</value>
+                </property>
+            </activation>
+            <properties>
+                <NODE_ENV>staging</NODE_ENV>
+            </properties>
+        </profile>
+        <profile>
+            <id>frontend-production</id>
+            <activation>
+                <property>
+                    <name>env.ENV</name>
+                    <value>production</value>
+                </property>
+            </activation>
+            <properties>
+                <NODE_ENV>production</NODE_ENV>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>

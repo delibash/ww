@@ -1,0 +1,14 @@
+@import './../../sass/vars.scss';
+
+.container {
+  position: absolute;
+  color: $white;
+  width: 60%;
+  left: 20%;
+  background: $midPaleGrey;
+  padding: 10px;
+  align-items: center;
+  border: 3px solid $warmGrey;
+  box-shadow: $greyBoxShadowLarge;
+  z-index: 1;
+}
